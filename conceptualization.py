@@ -7,9 +7,7 @@ import requests
 import json
 import rdflib
 
-from settings import BABELFY_KEY
-
-SEED = 'stuwerviertel'
+from settings import *
 
 LOTUS_API = "http://lotus.lodlaundromat.org/retrieve?match=%s&predicate=label&minmatch=100&cutoff=0.005&rank=%s&size=%i&string=%s"
 LODALOT_API = 'http://webscale.cc:3001/LOD-a-lot?%s=%s'

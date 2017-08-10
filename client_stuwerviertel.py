@@ -43,7 +43,7 @@ def stream_tweets():
         try:
             stream = Stream(auth_handler, listener)
             print ('Listening...')
-            stream.filter(track=['stuwerviertel'])
+            stream.filter(track=[SEED])
         except Exception as e:
             # reconnect on exceptions
             print (e)
