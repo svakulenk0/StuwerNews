@@ -10,6 +10,8 @@ from tweepy import Stream, API, OAuthHandler
 
 from settings import *
 
+KEYWORDS = ['praterstern', 'leopoldstadt']
+
 # set up Twitter connection
 auth_handler = OAuthHandler(APP_KEY, APP_SECRET)
 auth_handler.set_access_token(OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
@@ -43,7 +45,7 @@ def stream_tweets():
         try:
             stream = Stream(auth_handler, listener)
             print ('Listening...')
-            stream.filter(track=[SEED])
+            stream.filter(track=[SEED] + KEYWORDS)
         except Exception as e:
             # reconnect on exceptions
             print (e)
