@@ -28,19 +28,26 @@ KB lookup results via LOD-a-lot framework (LOTUS API):
 
 [Wikipedia(de)](https://de.wikipedia.org/wiki/Stuwerviertel)
 
-    links Leopoldstadt
+    links Leopoldstadt +
           Wiener Gemeindebezirks
-          Praterstern
+          Praterstern +
           Venediger Au
           Donau
           Ausstellungsstraße
           Prater
-          ...
+          Nordbahnhofgelände
+          Handelskai
+          Joseph II
           Wurstelprater
+          Johann Georg Stuwer
+          Kunstfeuerwerke
+          Weltausstellung 1873
           ...
+          Erzherzog-Wilhelm-Kaserne
           U-Bahn-Station Vorgartenstraße
           U-Bahn-Station Messe-Prater
-          ...
+          Rotlichtszene
+          Zimmervermietungen
           Straßenprostituierte
 
     Kategorien Leopoldstadt
