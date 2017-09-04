@@ -87,6 +87,11 @@ Prostitution
 Prostituierten
 Rotlichtszene
 
+
+### Co-occurences on Twitter
+
+leopoldstadt -> polditown
+
 ## Future work
 
 * Comments/discussion section on the articles web-pages e.g. http://derstandard.at/1379291474728/Anrainer-unterstuetzen-Sexarbeiterinnen-im-Wiener-Stuwerviertel
