@@ -6,6 +6,23 @@ svakulenko
 from elasticsearch import Elasticsearch
 from all_settings import INDEX
 
+
+mapping = {
+      'settings': {
+        # just one shard, no replicas for testing
+        'number_of_shards': 1,
+        'number_of_replicas': 0,
+      },
+      'mappings': {
+        'tweets': {
+          'properties': {
+            'tweet': {'type': 'text', 'analyzer': 'german'},
+            # 'tweet': {'type': 'text', 'analyzer': 'standard'},
+          }
+        }
+      }
+    }
+
 def create_index(index_name):
     es = Elasticsearch()
 
