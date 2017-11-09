@@ -10,6 +10,9 @@ Holds the seed keyword, my credentials, paths, names, etc.
 '''
 
 SEED = 'stuwerviertel'
+KEYWORDS = ['praterstern', 'leopoldstadt']
+
+INDEX = 'communidata'
 
 # Twitter API credentials
 APP_KEY = 'TODO'
