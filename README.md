@@ -8,6 +8,9 @@ Tweeting from [@WUWienSearch](https://twitter.com/WUWienSearch)
 * tweepy
 * elasticsearch
 
+Make sure ES instance is running!
+sudo /etc/init.d/elasticsearch restart 
+
 ## Results
 
 ### Conceptualization
