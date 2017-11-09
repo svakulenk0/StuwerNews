@@ -25,10 +25,9 @@ mapping = {
 
 def create_index(index_name):
     es = Elasticsearch()
-
     # reset index
     try:
-        es.indices.delete(index=index_name)
+        # es.indices.delete(index=index_name)
         es.indices.create(index=index_name, body=mapping)
     except Exception as e:
         print (e)
