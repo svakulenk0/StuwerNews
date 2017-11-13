@@ -40,7 +40,7 @@ class TopicListener(StreamListener):
         if not hasattr(status,'retweeted_status') and status.in_reply_to_status_id == None:
             tweet_text = status.text
             # check duplicates
-            duplicates = search_duplicate_tweets(query=query)
+            duplicates = search_duplicate_tweets(tweet_text)
             if not duplicates:
                 tweet_id = status.id
                 print(tweet_text)
