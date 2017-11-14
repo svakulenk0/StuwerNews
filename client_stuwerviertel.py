@@ -8,6 +8,8 @@ Simple Twitter stream filter
 from tweepy.streaming import StreamListener
 from tweepy import Stream, API, OAuthHandler
 
+from elasticsearch import Elasticsearch
+
 from settings import *
 from all_settings import *
 
