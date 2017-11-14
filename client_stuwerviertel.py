@@ -16,6 +16,9 @@ auth_handler = OAuthHandler(APP_KEY, APP_SECRET)
 auth_handler.set_access_token(OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 twitter_client = API(auth_handler)
 
+# set up ES connection
+es = Elasticsearch()
+
 
 def search_duplicate_tweets(query, threshold=13, index=INDEX):
     results = es.search(index=index, body={"query": {"match": {"tweet": query}}}, doc_type='tweets')['hits']
