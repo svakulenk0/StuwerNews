@@ -45,17 +45,17 @@ class TopicListener(StreamListener):
         if not hasattr(status,'retweeted_status') and status.in_reply_to_status_id == None:
             tweet_text = status.text
             # check duplicates
-            duplicates = search_duplicate_tweets(tweet_text)
-            if not duplicates:
-                tweet_id = status.id
-                print(tweet_text)
-                # retweet
-                twitter_client.retweet(id=tweet_id)
+            # duplicates = search_duplicate_tweets(tweet_text)
+            # if not duplicates:
+            tweet_id = status.id
+            print(tweet_text)
+            # retweet
+            twitter_client.retweet(id=tweet_id)
                 # store tweets that have been reported to ES
-                store_tweet(tweet_id, tweet_text)
+                # store_tweet(tweet_id, tweet_text)
 
     def on_error(self, status_code):
-      print (status_code, 'error code')
+        print (status_code, 'error code')
 
 
 def stream_tweets():
@@ -69,7 +69,8 @@ def stream_tweets():
         try:
             stream = Stream(auth_handler, listener)
             print ('Listening...')
-            stream.filter(track=[SEED] + KEYWORDS)
+            print [SEED] + KEYWORDS
+            stream.filter(track=[SEED]+KEYWORDS)
         except Exception as e:
             # reconnect on exceptions
             print (e)
